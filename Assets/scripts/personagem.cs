@@ -5,7 +5,7 @@ using UnityEngine;
 public class personagem : MonoBehaviour
 {
     Rigidbody2D fisica;
-
+    private float velocidade = 3f;
     private void Awake()
     {
         this.fisica = GetComponent<Rigidbody2D>();
@@ -18,10 +18,8 @@ public class personagem : MonoBehaviour
         {
             this.Impulsionar();
         }
-       
     }
-
-     void Impulsionar()
+    void Impulsionar()
     {
         this.fisica.AddForce(Vector2.up * 3, ForceMode2D.Impulse);
     }
